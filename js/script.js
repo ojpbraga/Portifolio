@@ -1,4 +1,4 @@
-const presentationDivContainer = document.querySelector("#h1-name");
+const presentationDivContainer = document.querySelector("#div-container");
 
 const nameTitle = document.querySelector("#h1-name");
 
@@ -8,13 +8,13 @@ const mouseCircle = document.createElement("div");
 const main = document.querySelector("main");
 
 // Troca de cor gradiente
-// presentationDivContainer.addEventListener("mousemove", (event) => {
-//     if(event.offsetX >= 0 && event.offsetY >= 0) {
-//         nameTitle.style.background = `linear-gradient(${event.offsetX}deg, rgba(0, 198, 198, 0.75) 40.02%, rgba(165, 68, 225, 0.912) 80.7%)`;
-//         nameTitle.style.webkitBackgroundClip = "text";
-//         nameTitle.style.webkitTextFillColor = "transparent";
-//     }
-// });
+presentationDivContainer.addEventListener("mousemove", (event) => {
+    if(event.offsetX >= 0 && event.offsetY >= 0) {
+        nameTitle.style.background = `linear-gradient(${event.offsetX}deg, rgba(0, 198, 198, 0.75) 40.02%, rgba(165, 68, 225, 0.912) 80.7%)`;
+        nameTitle.style.webkitBackgroundClip = "text";
+        nameTitle.style.webkitTextFillColor = "transparent";
+    }
+});
 
 // Background mouse
 backgroundColors.appendChild(mouseBackground);
