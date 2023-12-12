@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Style -->
-    <link rel="stylesheet" href="./sass/style.css">
-    <!-- JavaScript -->
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./sass/style.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>OJPBRAGA</title>
-</head>
-<body>
-    <header>
+  </head>
+  <body>
+
+    <div id="bg">
+      <div id="bg-1"></div>
+      <div id="bg-2"></div>
+      <div id="bg-3"></div>
+      <div id="bg-4"></div>
+      <div id="bg-5"></div>
+    </div>
+    <main>
+        <img src="./assets/img/group_bg.svg" alt="" id="bg-grup">
+      <header>
         <h1>OJPBRAGA</h1>
         <div id="header-div-container">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+          <div id="div-imgs-1">
+            <a href=""><img src="./assets/img/github-light.svg" alt="" /></a>
+            <a href=""><img src="./assets/img/linkedin_light.svg" alt="" /></a>
+          </div>
+          <div id="vertical-bar"></div>
+          <div id="div-imgs-2">
+            <a href=""><img src="./assets/img/sun-solid_light.svg" alt="" /></a>
+          </div>
         </div>
-    </header>
+      </header>
 
-    <section id="presentation">
-
+      <section id="presentation">
         <div id="div-container">
-            <div id="div-texts">
-                <h1>Olá! Eu sou o João</h1>
-                <h1>João</h1> 
-                <!-- FrontEnd será criado usando before -->
-                <p>Se for um site específico que foi lançado após recomendaria procurar mecanismo de busca ou em comunidades.</p>
-            </div>
-            <div id="div-profile">
-                <div id="div-background">
-                    <img src="" alt="">
-                </div>
-            </div>
+          <div id="div-texts">
+            <h2>Olá! Eu sou</h2>
+            <h1 id="h1-name" class="gradient-interaction">João</h1>
+            <!-- FrontEnd será criado usando before -->
+            <p>
+              Se for um site específico que foi lançado após recomendaria
+              procurar mecanismo de busca ou em comunidades.
+            </p>
+          </div>
+
+          <div id="div-profile">
+              <img src="./assets/img/jp.svg" alt="" />
+          </div>
         </div>
 
         <div id="div-scroll">
-            <img src="" alt="">
+          <img src="./assets/img/arrow.svg" alt="" />
         </div>
+      </section>
 
-    </section>
 
-</body>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+
+  </body>
 </html>
