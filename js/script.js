@@ -7,6 +7,8 @@ const backgroundColors = document.querySelector("#bg");
 const mouseCircle = document.createElement("div");
 const main = document.querySelector("main");
 
+const header = document.querySelector('header');
+
 // Troca de cor gradiente
 presentationDivContainer.addEventListener("mousemove", (event) => {
     if(event.offsetX >= 0 && event.offsetY >= 0) {
@@ -15,6 +17,9 @@ presentationDivContainer.addEventListener("mousemove", (event) => {
         nameTitle.style.webkitTextFillColor = "transparent";
     }
 });
+
+// Trocar de cor gradiente - About Me
+
 
 // Background mouse
 backgroundColors.appendChild(mouseBackground);
@@ -41,4 +46,17 @@ window.addEventListener("mousemove", (event) => {
 
     // mouseCircle.style.top = event.y-30 + "px";
     // mouseCircle.style.left = event.x-30 + "px";
+});
+
+
+// Troca de cor header
+window.addEventListener('scroll', () => {
+    if(scrollY > 400) {
+        header.style.background = "linear-gradient(90deg, #405CD9 0%, rgba(167, 85, 218, 0.8) 33.44%, rgba(228, 50, 91, 0.8) 64.17%, rgba(242, 205, 110, 0.8) 88.65%)";
+        header.style.backdropFilter = "blur(5px)";
+        header.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+        
+    } else if(scrollY < 400) {
+        header.style.background = "rgba(17, 95, 151, 0.3)";
+    }
 });
