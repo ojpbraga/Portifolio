@@ -6,12 +6,17 @@
     <!-- Style -->
     <link rel="stylesheet" href="./sass/style.css" />
     <!-- JS -->
-    <script type="module">
+    <script src="./js/script.js" defer></script>
+    
+    <script type="module" defer>
       import { ShaderArt } from 'https://esm.sh/shader-art';
       import { UniformPlugin } from 'https://esm.sh/@shader-art/plugin-uniform';
-    
+      
       ShaderArt.register([() => new UniformPlugin()]);
     </script>
+
+      <script src="./js/profile-background.js" defer></script>
+    <script src="./js/projects-background.js" defer></script>
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -51,7 +56,7 @@
         <div id="div-container">
           <div id="div-texts">
             <h2>Olá! Eu sou</h2>
-            <h1 id="h1-name" class="gradient-interaction">João</h1>
+            <h1 id="h1-name" class="gradient-sensitive">João</h1>
             <p>
               Se for um site específico que foi lançado após recomendaria
               procurar mecanismo de busca ou em comunidades.
@@ -69,7 +74,6 @@
       </section>
 
       <section id="about-me">
-        <div id="div-bg"></div>
         <div id="div-bg">
           <shader-art autoplay>
             <uniform type="float" name="scale" value=".4" min="0.1" max="4" step="0.01" />
@@ -174,7 +178,7 @@
 
           <div id="div-text">
             <!-- Front End utilizando After css -->
-            <h1>Quem sou eu?</h1>
+            <h1 class="gradient-sensitive">Quem sou eu?</h1>
             <p>Se for um site específico que foi lançado após recomendaria procurar mecanismo de busca ou em comunidades.</p>
           </div>
 
@@ -182,17 +186,30 @@
         </div>
 
         <div id="div-nickname">
-          <h1>JP</h1>
+          <h1 class="gradient-sensitive">JP</h1>
+        </div>
+
+      </section>
+
+      <section id="projects">
+        <!-- Formatos aqui -->
+        <div id="circle" class="formats"></div>
+        <div id="square" class="formats"></div>
+        <div id="rectangle" class="formats"></div>
+        <div id="star" class="formats"><img src="./assets/img/Star.svg" alt=""></div>
+        <div id="triangle" class="formats"></div>
+        <div id="diamond" class="formats"></div>
+        <div id="elipse" class="formats"></div>
+
+        <div id="div-container">
+          <!-- Carrosel aqui -->
+          <div></div>
         </div>
 
       </section>
       
     </main>
     
-    <!-- JavaScript -->
-    <!-- Lembrar de perguntar o André como subir lá pra cima -->
-    <script src="./js/script.js"></script>
-    <script src="./js/profile-background.js"></script>
 
   </body>
 </html>

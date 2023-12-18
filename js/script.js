@@ -10,6 +10,7 @@ const main = document.querySelector("main");
 const header = document.querySelector('header');
 
 // Troca de cor gradiente
+// Refazer essa parte
 presentationDivContainer.addEventListener("mousemove", (event) => {
     if(event.offsetX >= 0 && event.offsetY >= 0) {
         nameTitle.style.background = `linear-gradient(${event.offsetX}deg, rgba(0, 198, 198, 0.75) 40.02%, rgba(165, 68, 225, 0.912) 80.7%)`;
@@ -19,6 +20,27 @@ presentationDivContainer.addEventListener("mousemove", (event) => {
 });
 
 // Trocar de cor gradiente - About Me
+const aboutMeDivContainer = document.querySelector('#about-me > #div-container');
+const titleAboutMe = document.querySelector('#about-me > #div-container > #div-text > h1');
+
+const nicknameDivContainer = document.querySelector('#div-nickname');
+const nicknameAboutMe = document.querySelector('#about-me > #div-nickname > h1');
+
+aboutMeDivContainer.addEventListener("mousemove", (event) => {
+    if(event.offsetX >= 0 && event.offsetY >= 0) {
+        titleAboutMe.style.background = `linear-gradient(${event.offsetX}deg, rgba(0, 198, 198, 0.75) 40.02%, rgba(165, 68, 225, 0.912) 80.7%)`;
+        titleAboutMe.style.webkitBackgroundClip = "text";
+        titleAboutMe.style.webkitTextFillColor = "transparent";
+    }
+});
+
+nicknameDivContainer.addEventListener("mousemove", (event) => {
+    if(event.offsetX >= 0 && event.offsetY >= 0) {
+        nicknameAboutMe.style.background = `linear-gradient(${event.offsetX}deg, rgba(0, 198, 198, 0.75) 40.02%, rgba(165, 68, 225, 0.912) 80.7%)`;
+        nicknameAboutMe.style.webkitBackgroundClip = "text";
+        nicknameAboutMe.style.webkitTextFillColor = "transparent";
+    }
+});
 
 
 // Background mouse
@@ -40,7 +62,6 @@ mouseBackground.style.background = "rgba(0, 198, 198, 0.75)";
 
 
 window.addEventListener("mousemove", (event) => {
-    console.log(event.x, event.y);
     mouseBackground.style.top = event.y-50 + "px";
     mouseBackground.style.left = event.x-50 + "px";
 

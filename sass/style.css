@@ -25,7 +25,7 @@ body {
   position: absolute;
   z-index: -1;
   justify-content: space-between;
-  height: 200%;
+  height: 300%;
   width: 100%;
 }
 #bg #bg-1, #bg #bg-2, #bg #bg-3, #bg #bg-4, #bg #bg-5 {
@@ -120,9 +120,12 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 #presentation #div-container {
   display: flex;
+  position: absolute;
+  top: 30vh;
   width: 75vw;
   margin: 0 auto;
   justify-content: space-between;
@@ -179,9 +182,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  bottom: 7vh;
-  top: 14vh;
+  position: absolute;
+  bottom: 5vh;
   border: 2px solid #ABABAB;
   height: 12vh;
   width: 4vw;
@@ -332,4 +334,48 @@ shader-art canvas {
 
 .dg.ac {
   display: none;
+}
+
+#projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#projects .formats {
+  position: absolute;
+  scale: 1.1;
+  z-index: -1;
+}
+#projects #circle {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 2px solid #FFB800;
+}
+#projects #square {
+  width: 15rem;
+  height: 15rem;
+  border: 2px solid #FFB800;
+}
+#projects #rectangle {
+  width: 24rem;
+  height: 14rem;
+  border: 2px solid #FFB800;
+}
+#projects #star img {
+  height: 200px;
+}
+#projects #elipse {
+  width: 24rem;
+  height: 14rem;
+  border: 2px solid #FFB800;
+  border-radius: 50%;
+}
+#projects #div-container div {
+  z-index: 9;
+  background: #386d91;
+  height: 60vh;
+  width: 60vw;
+  border-radius: 40px;
 }/*# sourceMappingURL=style.css.map */
