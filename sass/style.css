@@ -12,14 +12,6 @@ a {
   font-size: 0;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
-
-body {
-  scroll-snap-type: y mandatory;
-}
-
 #bg {
   display: flex;
   position: absolute;
