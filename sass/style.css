@@ -12,6 +12,14 @@ a {
   font-size: 0;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+}
+
 #bg {
   display: flex;
   position: absolute;
@@ -331,6 +339,7 @@ shader-art canvas {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: relative;
 }
 #projects .formats {
@@ -363,10 +372,75 @@ shader-art canvas {
   border: 2px solid #FFB800;
   border-radius: 50%;
 }
-#projects #div-container div {
-  z-index: 9;
-  background: #386d91;
+#projects #div-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 5vh;
+  height: 90vh;
+  width: 70vw;
+}
+#projects #div-container #div-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 4vh;
+  left: 0;
+  justify-content: start;
+  border: 2px solid #FFB800;
+  border-radius: 20px;
+  height: 3.6rem;
+  width: 35vw;
+  padding: 0 1vw;
+}
+#projects #div-container #div-title h1 {
+  font-size: 4rem;
+  font-family: "Inter";
+  font-weight: 600;
+  letter-spacing: 3px;
+  background: linear-gradient(272deg, rgba(110, 191, 248, 0.6) 6.99%, rgba(238, 47, 255, 0.8) 155.99%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#projects #div-container #div-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#projects #div-container #div-carousel #div-carousel-container {
+  display: grid;
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+  gap: 4vh;
+  padding: 15vh 15vh;
+  scroll-snap-type: y mandatory;
+}
+#projects #div-container #div-carousel #div-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  background: #405CD9;
+  opacity: 1;
   height: 60vh;
-  width: 60vw;
-  border-radius: 40px;
+  width: 65vw;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item-1 {
+  scroll-snap-type: x mandatory;
+  opacity: 0.9;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item-2 {
+  scroll-snap-type: x mandatory;
+  opacity: 0.8;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item-3 {
+  background: #A755DA;
 }/*# sourceMappingURL=style.css.map */

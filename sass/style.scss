@@ -6,13 +6,13 @@
     justify-content: center;
 }
 
-// html {
-//     scroll-snap-type: y mandatory;
-// }
+html {
+    scroll-snap-type: y mandatory;
+}
 
-// body {
-//     scroll-snap-type: y mandatory;
-// }
+body {
+    scroll-snap-type: y mandatory;
+}
 
 #bg {
     display: flex;
@@ -359,6 +359,7 @@ shader-art canvas {
 
 #projects {
     @include centerItem();
+    flex-direction: column;
     position: relative;
 
     .formats {
@@ -392,17 +393,109 @@ shader-art canvas {
         height: 14rem;
         border: 2px solid #FFB800;
         border-radius: 50%;
-       }
+
+       
+    }
     
-    //    Teste visual do carrosel
     #div-container {
-        div {
-            z-index: 9;
-            background: #386d91;
-            height: 60vh;
-            width: 60vw;
-            border-radius: 40px;
+        @include centerItem();
+        position: relative;
+        top: 5vh;
+        height: 90vh;
+        width: 70vw;
+        
+        #div-title {
+            @include centerItem();
+            position: absolute;
+            top: 4vh;
+            left: 0;
+            justify-content: start;
+            border: 2px solid #FFB800;
+            border-radius: 20px;
+            height: 3.6rem;
+            width: 35vw;
+            padding: 0 1vw;
+    
+            h1 {
+                font-size: 4rem;
+                font-family: 'Inter';
+                font-weight: 600;
+                letter-spacing: 3px;
+                background: linear-gradient(272deg, rgba(110, 191, 248, 0.60) 6.99%, rgba(238, 47, 255, 0.80) 155.99%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
+        
+        #div-carousel {
+            @include centerItem();
+            height: 100%;
+
+            #div-carousel-container {
+                display: grid;
+                position: relative;
+                overflow-y: scroll;
+                height: 100%;
+                gap: 4vh;
+                padding: 15vh 15vh;
+                
+                scroll-snap-type: y mandatory;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .carousel-item {
+                    scroll-snap-align: center;
+                    scroll-snap-stop: always;
+
+                    background: #405CD9;
+                    opacity: 1;
+                    height: 60vh;
+                    width: 65vw;
+                    transition: all .3s ease-in-out;
+                    // z-index: -1;
+                    border-radius: 30px;
+
+                    
+                }
+
+                .carousel-item-1 {
+                    scroll-snap-type: x mandatory;
+                    // height: 60vh;
+                    // width: 65vw;
+                    // bottom: 45%;
+                    opacity: .9;
+                    // transform: translateY(20%);
+                }
+
+                .carousel-item-2 {
+                    scroll-snap-type: x mandatory;
+                    // height: 20vh;
+                    // width: 50vw;
+                    opacity: 0.8;
+                    // bottom: 100%;
+                    // transform: translateY(70%);
+                }
+                
+
+                .carousel-item-3 {
+                    
+                    // top: 50%;
+                    // transform: translateY(-50%);
+
+                    background: #A755DA;
+                }
+
+                .carousel-item-4 {
+                    
+                }
+
+
+            }
+        }
+        
     }
 
 } 
