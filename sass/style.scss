@@ -431,15 +431,18 @@ shader-art canvas {
         #div-carousel {
             @include centerItem();
             height: 100%;
+            
 
             #div-carousel-container {
                 display: grid;
+                justify-items: center;
                 position: relative;
                 overflow-y: scroll;
                 height: 100%;
+                width: 85vw;
                 gap: 4vh;
-                padding: 15vh 15vh;
-                
+                padding: 40vh 0 15vh 0;
+                // Resolver essa questão
                 scroll-snap-type: y mandatory;
 
                 &::-webkit-scrollbar {
@@ -452,13 +455,19 @@ shader-art canvas {
 
                     background: #405CD9;
                     opacity: 1;
-                    height: 60vh;
+                    height: 70vh;
                     width: 65vw;
-                    transition: all .3s ease-in-out;
+                    transition: all .5s ease-in-out;
                     // z-index: -1;
                     border-radius: 30px;
 
                     
+                }
+
+                .active {
+                    width: 50vw;
+                    height: 60vh;
+
                 }
 
                 .carousel-item-1 {
