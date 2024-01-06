@@ -386,13 +386,14 @@ shader-art canvas {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 4vh;
-  left: 0;
+  rotate: 90deg;
+  top: 35vh;
+  left: -10vw;
   justify-content: start;
   border: 2px solid #FFB800;
   border-radius: 20px;
   height: 3.6rem;
-  width: 35vw;
+  width: 32vw;
   padding: 0 1vw;
 }
 #projects #div-container #div-title h1 {
@@ -417,9 +418,8 @@ shader-art canvas {
   position: relative;
   overflow-y: scroll;
   height: 100%;
-  width: 85vw;
   gap: 4vh;
-  padding: 40vh 0 15vh 0;
+  padding: 4vh 0 15vh 0;
   scroll-snap-type: y mandatory;
 }
 #projects #div-container #div-carousel #div-carousel-container::-webkit-scrollbar {
@@ -430,14 +430,14 @@ shader-art canvas {
   scroll-snap-stop: always;
   background: #405CD9;
   opacity: 1;
-  height: 70vh;
-  width: 65vw;
+  width: 50vw;
+  height: 60vh;
   transition: all 0.5s ease-in-out;
   border-radius: 30px;
 }
 #projects #div-container #div-carousel #div-carousel-container .active {
-  width: 50vw;
-  height: 60vh;
+  height: 70vh;
+  width: 65vw;
 }
 #projects #div-container #div-carousel #div-carousel-container .carousel-item-1 {
   scroll-snap-type: x mandatory;

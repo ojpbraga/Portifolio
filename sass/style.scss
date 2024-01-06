@@ -407,13 +407,15 @@ shader-art canvas {
         #div-title {
             @include centerItem();
             position: absolute;
-            top: 4vh;
-            left: 0;
+            rotate: 90deg;
+            top: 35vh;
+            left: -10vw;
+
             justify-content: start;
             border: 2px solid #FFB800;
             border-radius: 20px;
             height: 3.6rem;
-            width: 35vw;
+            width: 32vw;
             padding: 0 1vw;
     
             h1 {
@@ -427,6 +429,18 @@ shader-art canvas {
                 -webkit-text-fill-color: transparent;
             }
         }
+        // .title-active {
+        //     animation: trans 1s;
+
+        //     @keyframes trans {
+        //         from {
+        //             transform: rotate(0deg);
+        //         }
+        //         to {
+        //             transform: rotate(90deg);
+        //         }
+        //     }
+        // }
         
         #div-carousel {
             @include centerItem();
@@ -439,9 +453,9 @@ shader-art canvas {
                 position: relative;
                 overflow-y: scroll;
                 height: 100%;
-                width: 85vw;
+                // width: 85vw;
                 gap: 4vh;
-                padding: 40vh 0 15vh 0;
+                padding: 4vh 0 15vh 0;
                 // Resolver essa questão
                 scroll-snap-type: y mandatory;
 
@@ -455,8 +469,9 @@ shader-art canvas {
 
                     background: #405CD9;
                     opacity: 1;
-                    height: 70vh;
-                    width: 65vw;
+                    width: 50vw;
+                    height: 60vh;
+                    
                     transition: all .5s ease-in-out;
                     // z-index: -1;
                     border-radius: 30px;
@@ -465,9 +480,8 @@ shader-art canvas {
                 }
 
                 .active {
-                    width: 50vw;
-                    height: 60vh;
-
+                    height: 70vh;
+                    width: 65vw;
                 }
 
                 .carousel-item-1 {

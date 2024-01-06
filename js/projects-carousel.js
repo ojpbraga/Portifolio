@@ -7,6 +7,8 @@ function carouselAnimation() {
     function animationDiv() {
         itemsCarousel.forEach((div, index) => {
             const divTop = div.getBoundingClientRect().top;
+
+            console.log(divTop)
     
             const mainDiv = div.nextElementSibling;
         
@@ -17,27 +19,29 @@ function carouselAnimation() {
                         div.classList.remove('active');
                     });
 
-                    
-                    div.classList.add('active');
-                    div.nextElementSibling.nextElementSibling.classList.add('active');
+                    mainDiv.classList.add('active');
     
-                    
                     // Resolver o 100, pois dependendo da tela esse valor mudar
         
                 } else if(divTop <= 100) {
-                    div.nextElementSibling.classList.add('active');
-                    itemsCarousel[0].classList.remove('active');
+        
+                    itemsCarousel[0].classList.add('active');
+                    itemsCarousel[0].nextElementSibling.classList.remove('active');
                     
                 }
-            }, 800);
+            }, 900);
             
     
         });
     }
     containerCarousel.addEventListener('scroll', animationDiv);
-    
 }
 
-if(sectionProjects.getBoundingClientRect().top >= 0) {
-    carouselAnimation();
-}
+carouselAnimation();
+
+// window.addEventListener('scroll', () => {
+//     if(sectionProjects.getBoundingClientRect().top === 0) {
+//         carouselAnimation();
+//         itemsCarousel[0].classList.remove('active');
+//     }
+// });
