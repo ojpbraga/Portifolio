@@ -394,7 +394,7 @@ shader-art canvas {
   border-radius: 20px;
   height: 3.6rem;
   width: 32vw;
-  padding: 0 1vw;
+  transition: 0.5s;
 }
 #projects #div-container #div-title h1 {
   font-size: 4rem;

@@ -7,8 +7,6 @@ function carouselAnimation() {
     function animationDiv() {
         itemsCarousel.forEach((div, index) => {
             const divTop = div.getBoundingClientRect().top;
-
-            console.log(divTop)
     
             const mainDiv = div.nextElementSibling;
         
@@ -36,12 +34,22 @@ function carouselAnimation() {
     }
     containerCarousel.addEventListener('scroll', animationDiv);
 }
-
 carouselAnimation();
 
-// window.addEventListener('scroll', () => {
-//     if(sectionProjects.getBoundingClientRect().top === 0) {
-//         carouselAnimation();
-//         itemsCarousel[0].classList.remove('active');
-//     }
-// });
+// Animation Title
+function initTitleAnimation() {
+
+    const divTitle = document.querySelector('#projects > #div-container > #div-title');
+
+    window.addEventListener('scroll', () => {
+        if(sectionProjects.getBoundingClientRect().top <= 0) {
+            divTitle.style.transform = 'translate3d(0, 150px, 0)';
+        } else {
+            divTitle.style.transform = 'translate3d(0, 0, 0)';
+        }
+        
+    });
+
+}
+
+initTitleAnimation();

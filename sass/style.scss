@@ -416,7 +416,8 @@ shader-art canvas {
             border-radius: 20px;
             height: 3.6rem;
             width: 32vw;
-            padding: 0 1vw;
+
+            transition: .5s;
     
             h1 {
                 font-size: 4rem;
@@ -429,18 +430,6 @@ shader-art canvas {
                 -webkit-text-fill-color: transparent;
             }
         }
-        // .title-active {
-        //     animation: trans 1s;
-
-        //     @keyframes trans {
-        //         from {
-        //             transform: rotate(0deg);
-        //         }
-        //         to {
-        //             transform: rotate(90deg);
-        //         }
-        //     }
-        // }
         
         #div-carousel {
             @include centerItem();
@@ -456,7 +445,6 @@ shader-art canvas {
                 // width: 85vw;
                 gap: 4vh;
                 padding: 4vh 0 15vh 0;
-                // Resolver essa questão
                 scroll-snap-type: y mandatory;
 
                 &::-webkit-scrollbar {
