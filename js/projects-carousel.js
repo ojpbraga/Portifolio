@@ -27,7 +27,7 @@ function carouselAnimation() {
                     itemsCarousel[0].nextElementSibling.classList.remove('active');
                     
                 }
-            }, 900);
+            }, 800);
             
     
         });
@@ -43,9 +43,11 @@ function initTitleAnimation() {
 
     window.addEventListener('scroll', () => {
         if(sectionProjects.getBoundingClientRect().top <= 0) {
+            // divTitle.style.display = 'inherit';
             divTitle.style.transform = 'translate3d(0, 150px, 0)';
         } else {
             divTitle.style.transform = 'translate3d(0, 0, 0)';
+            // divTitle.style.display = 'none';
         }
         
     });
