@@ -368,7 +368,7 @@ shader-art canvas {
 
     .formats {
         position: absolute;
-        scale: 1.1;
+        // scale: 1.1;
         z-index: -1;
     }
     #circle {
@@ -549,8 +549,8 @@ footer {
                     display: block;
                     position: absolute;
 
-                    top: 26vh;
-                    right: 27.2vw;
+                    top: 190px;
+                    right: 420px;
                     z-index: -1;
                 }
 
@@ -596,7 +596,7 @@ footer {
         width: 70vw;
         border-radius: 2px;
         background: #fff;
-        margin: 30px 0 20px 0;
+        margin: 30px 0 10px 0;
     }
 
     #footer {
@@ -622,7 +622,6 @@ footer {
             display: flex;
             gap: 5vw;
 
-
                 .div-links {
                     display: flex;
                     flex-direction: column;
@@ -630,9 +629,8 @@ footer {
                     
                     h2 {
                         color: #FFF;
-                        text-align: center;
                         font-family: Inter;
-                        font-size: 24px;
+                        font-size: 1.3rem;
                         font-style: normal;
                         font-weight: 300;
                     }
@@ -640,7 +638,7 @@ footer {
                     ul {
                         display: grid;
                         justify-content: space-between;
-                        height: 10vh;
+                        height: 13vh;
 
                         li {
                             color: #FFF;
