@@ -64,7 +64,6 @@ main {
 }
 
 
-// Colocar cores no reset
 header {
     @include centerItem();
     justify-content: space-between;
@@ -91,20 +90,29 @@ header {
     #header-div-container {
         @include centerItem();
         gap: 20px;
+
+        
+        img{
+            height: 1.6rem;
+        }
+        #vertical-bar {
+            background: #fff;
+            width: 2px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        #div-imgs-1, #div-imgs-2 {
+            @include centerItem();
+            gap: 15px;
+
+        } 
+        #div-imgs-2 {
+            height: 26px;
+            width: 26px;
+        }
+        
+
     }
-    img{
-        height: 1.6rem;
-    }
-    #vertical-bar {
-        background: #fff;
-        width: 2px;
-        height: 30px;
-        border-radius: 10px;
-    }
-    #div-imgs-1, #div-imgs-2 {
-        @include centerItem();
-        gap: 15px;
-    } 
     
 }
 

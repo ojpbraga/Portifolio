@@ -111,20 +111,24 @@ header #header-div-container {
   justify-content: center;
   gap: 20px;
 }
-header img {
+header #header-div-container img {
   height: 1.6rem;
 }
-header #vertical-bar {
+header #header-div-container #vertical-bar {
   background: #fff;
   width: 2px;
   height: 30px;
   border-radius: 10px;
 }
-header #div-imgs-1, header #div-imgs-2 {
+header #header-div-container #div-imgs-1, header #header-div-container #div-imgs-2 {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+header #header-div-container #div-imgs-2 {
+  height: 26px;
+  width: 26px;
 }
 
 section {
