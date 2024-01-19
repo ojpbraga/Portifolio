@@ -92,6 +92,7 @@ changeHeader("linear-gradient(90deg, #405CD9 0%, rgba(167, 85, 218, 0.8) 33.44%,
 // Dark Mode
 const html = document.querySelector("html");
 const buttonTheme = document.querySelector("#button-switch-theme");
+// html.classList.add('dark-mode'); // Mantendo como defoult
 
 buttonTheme.addEventListener('click', () => {
     // Troca das cores
