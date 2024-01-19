@@ -22,10 +22,18 @@ a {
     --color-background-blue: rgba(164, 239, 255, 0.76);
     --color-grey: #ABABAB;
 
+    // Scrollbar
+    --color-scrollbar-bg-yellow-black: #f2cd6e66;
+    --color-scrollbar-thumb-blue-talk: #12b4d1;
+
     &.dark-mode {
         --color-background-main: rgba(0, 0, 0, 0.85);
         --color-yellow-talk: #C0C0C0;
         --color-text: #fff;
         --color-background-blue: rgba(27, 54, 72, 0.70);
+
+        // Scrollbar
+        --color-scrollbar-bg-yellow-black: rgba(0, 0, 0, 0.90);
+        --color-scrollbar-thumb-blue-talk: #c0c0c0df;
     }
 }
