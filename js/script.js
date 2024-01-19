@@ -85,7 +85,8 @@ function changeHeader(gradient) {
         
     })
 }
-changeHeader("linear-gradient(90deg, #405CD9 0%, rgba(167, 85, 218, 0.8) 33.44%, rgba(228, 50, 91, 0.8) 64.17%, rgba(242, 205, 110, 0.8) 88.65%)");
+// Header iniciando no modo dark
+changeHeader("linear-gradient(90deg, rgba(64, 92, 217, 0.70) 0%, rgba(167, 85, 218, 0.32) 33.44%, rgba(228, 50, 91, 0.49) 64.17%, rgba(242, 205, 110, 0.49) 88.65%)");
 
 
 
