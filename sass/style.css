@@ -207,14 +207,10 @@ section {
   font-size: 20px;
   font-weight: 400;
 }
-#presentation #div-profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-background-blue);
+#presentation #div-profile video {
   width: 25vw;
-  height: 50vh;
   border-radius: 40px;
+  background: #3ce3fb;
 }
 #presentation #div-scroll {
   display: flex;

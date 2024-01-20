@@ -203,11 +203,18 @@ section {
     }
 
     #div-profile {
-        @include centerItem();
-        background: var(--color-background-blue);
-        width: 25vw;
-        height: 50vh;
-        border-radius: 40px;
+        // @include centerItem();
+        // background: #3ce3fb;
+        // width: 25vw;
+        // height: 50vh;
+        // border-radius: 40px;
+
+        video {
+            // height: 50vh;
+            width: 25vw;
+            border-radius: 40px;
+            background: #3ce3fb;
+        }
     }
 
     #div-scroll {
