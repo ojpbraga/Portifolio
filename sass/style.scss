@@ -211,6 +211,7 @@ section {
 
         video {
             // height: 50vh;
+            // Quando for fazer o responsivo, colocar o width: 30vw; quando entrar em telas menores. Pois ficará com tamanho adequado.
             width: 25vw;
             border-radius: 40px;
             background: #3ce3fb;
@@ -259,9 +260,12 @@ section {
             height: 35vh;
             width: 17vw;
             border-radius: 30px;
+           
+            overflow: hidden;
 
             img {
-                height: 30vh;
+                height: 35vh;
+                -webkit-transform: scale(1.5);
             }
         }
 

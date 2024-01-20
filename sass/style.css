@@ -254,9 +254,11 @@ section {
   height: 35vh;
   width: 17vw;
   border-radius: 30px;
+  overflow: hidden;
 }
 #about-me #div-profile #div-background img {
-  height: 30vh;
+  height: 35vh;
+  -webkit-transform: scale(1.5);
 }
 #about-me #div-profile #div-technologies {
   display: grid;
