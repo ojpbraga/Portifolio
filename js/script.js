@@ -1,5 +1,5 @@
 // Play avatar
-document.querySelector('video').play();
+// document.querySelector('video').play();
 
 const presentationDivContainer = document.querySelector("#div-container");
 
