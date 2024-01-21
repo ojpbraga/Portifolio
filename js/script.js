@@ -1,3 +1,6 @@
+// Play avatar
+document.querySelector('video').play();
+
 const presentationDivContainer = document.querySelector("#div-container");
 
 const nameTitle = document.querySelector("#h1-name");
