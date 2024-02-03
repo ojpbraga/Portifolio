@@ -107,7 +107,7 @@ header {
   margin: 0 auto;
   left: 0;
   right: 0;
-  border-radius: 20px;
+  border-radius: 2.68vh;
   height: 7vh;
   padding: 0 2vw;
   top: 3vh;
@@ -220,7 +220,7 @@ section {
   bottom: 5vh;
   border: 2px solid var(--color-grey);
   height: 12vh;
-  width: 4vw;
+  width: 60px;
   border-radius: 30px;
 }
 #presentation #div-scroll img {
