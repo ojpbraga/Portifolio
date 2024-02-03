@@ -453,7 +453,7 @@ shader-art canvas {
             border: 2px solid var(--color-yellow-talk);
             border-radius: 20px;
             height: 3.6rem;
-            width: 32vw;
+            width: 450px;
 
             transition: .5s;
     
@@ -596,9 +596,7 @@ footer {
             // position: relative;
             place-items: center;
             justify-self: end;
-            // top: 30vh;
-            // height: 18vh;
-            width: 20vw;
+            width: 300px;
             border-radius: 30px;
             overflow: hidden;
 
@@ -618,26 +616,28 @@ footer {
                 // border-radius: 30px;
                 background: #405CD9;
                 height: 18vh;
-                width: 20vw;
+                width: 300px;
             }
 
         }
 
     }
 
-    #separate-div {
-        height: 2px;
-        width: 70vw;
-        border-radius: 2px;
-        background: #fff;
-        margin: 30px 0 10px 0;
-    }
+    // #separate-div {
+    //     height: 2px;
+    //     width: 73vw;
+    //     border-radius: 2px;
+    //     background: #fff;
+    //     margin: 30px 0 10px 0;
+    // }
 
     #footer {
         display: flex;
         justify-content: space-between;
         height: 20vh;
         width: 70vw;
+
+        border-top: solid 2px #FFF;
 
         h3 {
             text-align: center;
@@ -697,3 +697,18 @@ footer {
 }
 
 // Responsividade
+// 1390 x 750
+@media (max-width: 1391px) {
+    #presentation{
+        #div-profile{
+            video{
+                width: 30vw;
+            }
+
+        }
+    }
+    footer #contact h1 {
+        font-size: 5.5rem;
+    }
+
+}

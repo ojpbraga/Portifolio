@@ -427,7 +427,7 @@ shader-art canvas {
   border: 2px solid var(--color-yellow-talk);
   border-radius: 20px;
   height: 3.6rem;
-  width: 32vw;
+  width: 450px;
   transition: 0.5s;
 }
 #projects #div-container #div-title h1 {
@@ -526,7 +526,7 @@ footer #contact #button {
   display: grid;
   place-items: center;
   justify-self: end;
-  width: 20vw;
+  width: 300px;
   border-radius: 30px;
   overflow: hidden;
 }
@@ -544,20 +544,14 @@ footer #contact #button shader-art {
   position: absolute;
   background: #405CD9;
   height: 18vh;
-  width: 20vw;
-}
-footer #separate-div {
-  height: 2px;
-  width: 70vw;
-  border-radius: 2px;
-  background: #fff;
-  margin: 30px 0 10px 0;
+  width: 300px;
 }
 footer #footer {
   display: flex;
   justify-content: space-between;
   height: 20vh;
   width: 70vw;
+  border-top: solid 2px #FFF;
 }
 footer #footer h3 {
   text-align: center;
@@ -599,4 +593,13 @@ footer #footer #div-container .div-links ul li {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+
+@media (max-width: 1391px) {
+  #presentation #div-profile video {
+    width: 30vw;
+  }
+  footer #contact h1 {
+    font-size: 5.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
