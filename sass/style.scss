@@ -552,6 +552,7 @@ shader-art canvas {
 footer {
     @include centerItem();
     flex-direction: column;
+    gap: 20px;
 
     height: 100vh;
     scroll-snap-align: center;
@@ -636,6 +637,7 @@ footer {
         justify-content: space-between;
         height: 20vh;
         width: 70vw;
+        padding: 10px;
 
         border-top: solid 2px #FFF;
 
@@ -697,18 +699,52 @@ footer {
 }
 
 // Responsividade
+// Tablet - Retrato mode
+
 // 1390 x 750
 @media (max-width: 1391px) {
     #presentation{
+        #div-container{
+            top: 25vh;
+        }
+        
         #div-profile{
             video{
                 width: 30vw;
             }
-
         }
     }
     footer #contact h1 {
         font-size: 5.5rem;
     }
 
+}
+
+// 1200 x 850
+@media (max-width: 1200px) {
+    #presentation {
+        #div-profile video {
+           width: 33vw;
+       }
+    }
+}
+
+// 1025 x 770
+@media (max-width: 1025px) {
+    #presentation{
+        #div-container {
+            width: 83vw;
+        }
+        #div-texts p {
+            width: 39vw;
+        }
+    }
+
+    #about-me #div-container{
+        max-width: 950px;
+    }
+
+    footer #contact h1 {
+        font-size: 5rem;
+    }
 }

@@ -489,6 +489,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
   height: 100vh;
   scroll-snap-align: center;
 }
@@ -551,6 +552,7 @@ footer #footer {
   justify-content: space-between;
   height: 20vh;
   width: 70vw;
+  padding: 10px;
   border-top: solid 2px #FFF;
 }
 footer #footer h3 {
@@ -596,10 +598,32 @@ footer #footer #div-container .div-links ul li {
 }
 
 @media (max-width: 1391px) {
+  #presentation #div-container {
+    top: 25vh;
+  }
   #presentation #div-profile video {
     width: 30vw;
   }
   footer #contact h1 {
     font-size: 5.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  #presentation #div-profile video {
+    width: 33vw;
+  }
+}
+@media (max-width: 1025px) {
+  #presentation #div-container {
+    width: 83vw;
+  }
+  #presentation #div-texts p {
+    width: 39vw;
+  }
+  #about-me #div-container {
+    max-width: 950px;
+  }
+  footer #contact h1 {
+    font-size: 5rem;
   }
 }/*# sourceMappingURL=style.css.map */
