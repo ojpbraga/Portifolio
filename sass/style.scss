@@ -271,17 +271,17 @@ section {
 
         #div-technologies {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 15px;
             p {
                 @include centerItem();
                 color: var(--color-text);
                 text-align: center;
                 font-family: Inter;
-                font-size: 1.5rem;
+                font-size: 1rem;
                 font-style: normal;
                 font-weight: 900;
-                min-width: 100px;
+                min-width: 40px;
                 min-height: 40px;
                 border-radius: 7px;
             
@@ -293,8 +293,24 @@ section {
                 background: rgba(110, 191, 248, 0.60);
             }
             p:nth-child(3) {
+                background: #cb6699;
+            }
+            p:nth-child(4) {
                 background: #f2cd6e;
             }
+            p:nth-child(5) {
+                background: linear-gradient(90deg, rgba(242,78,30,1) 0%, rgba(255,114,98,1) 20%, rgba(162,89,255,1) 43%, rgba(26,188,254,1) 63%, rgba(10,207,131,1) 84%);
+            }
+            p:nth-child(6) {
+                background: #744e3b;
+            }
+            p:nth-child(7) {
+                background: #556096;
+            }
+            p:nth-child(8) {
+                background: #086590;
+            }
+            
         }
     }
 
@@ -746,5 +762,190 @@ footer {
 
     footer #contact h1 {
         font-size: 5rem;
+    }
+}
+
+// 1005
+@media (max-width: 1105px) {
+    #presentation #div-container {
+        width: 85vw;
+    }
+}
+
+//428 x 926
+@media (max-width: 430px) {
+    main{
+        #bg-grup-first {
+            height: 15vh;
+            // width: 100%;
+        }
+    }
+    header{
+        height: 65px;
+        width: 93vw;
+        padding: 25px;
+        top: 2vh;
+    }
+
+    #presentation{
+
+        #div-container{
+            display: grid;
+            top: 13vh;
+            gap: 2vh;
+            
+
+            #div-texts{
+                #h1-name{
+                    font-size: 6rem;
+                }
+
+                p{
+                    display: none;
+                }
+            }
+
+            #div-profile{
+
+                video{
+                    width: 100%;
+                }
+            } 
+        }
+
+        #div-scroll{
+            bottom: 1vh;
+        }
+    } 
+    
+    #about-me #div-bg {
+        top: 12vh;
+        height: 20vh;
+    }
+    #about-me {
+        #div-container {
+            flex-direction: column;
+            gap: 2vh;
+            top: 20vh;
+            width: 95vw;
+
+            #div-profile {
+                display: flex;
+
+                #div-background {
+                    height: 200px;
+                    width: 350px;
+
+                    img {
+                        height: 25vh;
+                    }
+                }
+                #div-technologies {
+                    // height: 80px;
+                    width: 100%;
+                    align-self: end;
+                    gap: 8px;
+
+                    p {
+                        // background: #386d91;
+                        min-height: 35px;
+                    }
+                }
+            }
+        }
+        #div-text {
+            top: 0;
+            width: 100%;
+
+            .gradient-sensitive {
+                font-size: 2.5rem;
+            }
+
+            h1 {
+                &::after {
+                    bottom: 20px;
+                    font-size: .875rem;
+                }
+            }
+            p {
+                width: 100%;
+            }
+        }
+
+        #div-nickname {
+            display: none;
+        }
+    }
+
+    #projects {
+        max-width: 100vw;
+
+        #div-container {
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            
+            #div-title {
+                    rotate: 0deg;
+                    width: 100%;
+                    top: -16vh;
+                    padding: 10px;
+                    left: 0;
+
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+
+            #div-carousel {
+                position: absolute;
+                top: 4vh;
+                // left: 10vw;
+
+                #div-carousel-container {
+                    padding: 0 10vw; 
+                    display: flex;
+                    align-items: center;
+                    max-width: 100vw;
+                    scroll-snap-type: x mandatory;
+
+                    .active {
+                        min-width: 80vw;
+                        min-height: 75vh;
+                    }
+                }
+            }
+
+        }  
+    }
+    
+   #div-carousel #div-carousel-container .carousel-item  {
+    min-width: 70vw;
+    min-height: 55vh;
+   }
+   #projects #div-container #div-carousel #div-carousel-container .carousel-item {
+    // margin: 0 10vw;
+   }
+
+   #footer {
+    display: none !important;
+   }
+
+}
+
+// Por enquanto 
+@media (max-width: 930px) {
+    #about-me #div-container {
+        max-width: 400px;
+    }
+    #about-me #div-text h1 {
+        font-size: 1rem;
+    }
+    #about-me #div-profile #div-background {
+        // width: 100px;
+        // height: 100px;
+    }
+    footer #contact h1 {
+        font-size: 2rem;
     }
 }
