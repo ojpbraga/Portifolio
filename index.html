@@ -9,12 +9,12 @@
     <script src="./js/script.js" defer></script>
 
     <!-- Animação profile: reativar -->
-    <script type="module" defer>
+    <!-- <script type="module" defer>
       import { ShaderArt } from 'https://esm.sh/shader-art';
       import { UniformPlugin } from 'https://esm.sh/@shader-art/plugin-uniform';
       
       ShaderArt.register([() => new UniformPlugin()]);
-    </script>
+    </script> -->
 
     <script src="./js/profile-background.js" defer></script>
     <script src="./js/projects-carousel.js" defer></script>
@@ -168,29 +168,26 @@
 
         <div id="div-container">
 
-          <div id="div-profile">
-            <div id="div-background">
-              <img src="./assets/img/jp.png" alt="">
-            </div>
-            <div id="div-technologies">
-              <p>HTML5</p>
-              <p>CSS6</p>
-              <p>SASS</p>
-              <p>JS</p>
-              <p>FIGMA</p>
-              <p>JAVA</p>
-              <p>PHP</p>
-              <p>MySQL</p>
-            </div>
+          <div id="div-background">
+            <img src="./assets/img/jp.png" alt="">
           </div>
 
-          <div id="div-text">
-            <!-- Front End utilizando After css -->
-            <h1 class="gradient-sensitive">Quem sou eu?</h1>
-            <p>Se for um site específico que foi lançado após recomendaria procurar mecanismo de busca ou em comunidades.</p>
+          <div id="div-technologies">
+            <p>HTML5</p>
+            <p>CSS6</p>
+            <p>SASS</p>
+            <p>JS</p>
+            <p>FIGMA</p>
+            <p>JAVA</p>
+            <p>PHP</p>
+            <p>MySQL</p>
           </div>
 
-          
+          <h1 class="gradient-sensitive" id="about-me-title">Quem sou eu?</h1>
+
+          <p id="about-me-text">Se for um site específico que foi lançado após recomendaria procurar mecanismo de busca ou em comunidades.</p>
+         
+
         </div>
 
         <div id="div-nickname">
