@@ -630,14 +630,8 @@ footer #footer #div-container .div-links ul li {
   }
 }
 @media (max-width: 1025px) {
-  #presentation #div-container {
-    width: 83vw;
-  }
   #presentation #div-texts p {
     width: 39vw;
-  }
-  #about-me #div-container {
-    max-width: 950px;
   }
   footer #contact h1 {
     font-size: 5rem;
@@ -680,42 +674,38 @@ footer #footer #div-container .div-links ul li {
     height: 20vh;
   }
   #about-me #div-container {
-    flex-direction: column;
-    gap: 2vh;
-    top: 20vh;
-    width: 95vw;
+    grid-template-columns: 130px 1fr;
+    top: 25vh;
   }
-  #about-me #div-container #div-profile {
-    display: flex;
+  #about-me #div-background {
+    height: 150px;
+    width: 150px;
   }
-  #about-me #div-container #div-profile #div-background {
-    height: 200px;
-    width: 350px;
-  }
-  #about-me #div-container #div-profile #div-background img {
+  #about-me #div-background img {
     height: 25vh;
   }
-  #about-me #div-container #div-profile #div-technologies {
+  #about-me #div-technologies {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(4, 1fr);
+    height: 10vh;
     width: 100%;
-    align-self: end;
     gap: 8px;
   }
-  #about-me #div-container #div-profile #div-technologies p {
+  #about-me #div-technologies p {
     min-height: 35px;
   }
-  #about-me #div-text {
-    top: 0;
-    width: 100%;
-  }
-  #about-me #div-text .gradient-sensitive {
+  #about-me #about-me-title {
     font-size: 2.5rem;
+    bottom: 0;
   }
-  #about-me #div-text h1::after {
+  #about-me #about-me-title::after {
     bottom: 20px;
     font-size: 0.875rem;
   }
-  #about-me #div-text p {
+  #about-me #about-me-text {
+    grid-column: 1/-1;
     width: 100%;
+    bottom: 8vh;
   }
   #about-me #div-nickname {
     display: none;
@@ -763,7 +753,7 @@ footer #footer #div-container .div-links ul li {
 }
 @media (max-width: 930px) {
   #about-me #div-container {
-    max-width: 400px;
+    grid-template-columns: 30vw 1fr;
   }
   #about-me #div-text h1 {
     font-size: 1rem;

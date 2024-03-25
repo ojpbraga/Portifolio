@@ -748,17 +748,17 @@ footer {
 // 1025 x 770
 @media (max-width: 1025px) {
     #presentation{
-        #div-container {
-            width: 83vw;
-        }
+        // #div-container {
+        //     width: 83vw;
+        // }
         #div-texts p {
             width: 39vw;
         }
     }
 
-    #about-me #div-container{
-        max-width: 950px;
-    }
+    // #about-me #div-container{
+    //     max-width: 950px;
+    // }
 
     footer #contact h1 {
         font-size: 5rem;
@@ -823,54 +823,48 @@ footer {
         height: 20vh;
     }
     #about-me {
+       
         #div-container {
-            flex-direction: column;
-            gap: 2vh;
-            top: 20vh;
-            width: 95vw;
+            grid-template-columns: 130px 1fr;
+            top: 25vh;
+        }
 
-            #div-profile {
-                display: flex;
+        #div-background {
+            height: 150px;
+            width: 150px;
 
-                #div-background {
-                    height: 200px;
-                    width: 350px;
-
-                    img {
-                        height: 25vh;
-                    }
-                }
-                #div-technologies {
-                    // height: 80px;
-                    width: 100%;
-                    align-self: end;
-                    gap: 8px;
-
-                    p {
-                        // background: #386d91;
-                        min-height: 35px;
-                    }
-                }
+            img {
+                height: 25vh;
             }
         }
-        #div-text {
-            top: 0;
+        #div-technologies {
+            grid-column: 1 / -1;
+            grid-template-columns: repeat(4, 1fr);
+            height: 10vh;
             width: 100%;
-
-            .gradient-sensitive {
-                font-size: 2.5rem;
+            gap: 8px;
+            p {
+                // background: #386d91;
+                min-height: 35px;
             }
+        }
 
-            h1 {
+
+            #about-me-title {
+                font-size: 2.5rem;
+                bottom: 0;
+
                 &::after {
                     bottom: 20px;
                     font-size: .875rem;
                 }
             }
-            p {
+            #about-me-text {
+                grid-column: 1 / -1;
                 width: 100%;
+                bottom: 8vh;
             }
-        }
+
 
         #div-nickname {
             display: none;
@@ -936,7 +930,8 @@ footer {
 // Por enquanto 
 @media (max-width: 930px) {
     #about-me #div-container {
-        max-width: 400px;
+        // max-width: 400px;
+        grid-template-columns: 30vw 1fr;
     }
     #about-me #div-text h1 {
         font-size: 1rem;
