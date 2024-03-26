@@ -646,6 +646,9 @@ footer #footer #div-container .div-links ul li {
   main #bg-grup-first {
     height: 15vh;
   }
+  main #bg-grup-second {
+    height: 15vh;
+  }
   header {
     height: 65px;
     width: 93vw;
@@ -747,18 +750,41 @@ footer #footer #div-container .div-links ul li {
     min-width: 70vw;
     min-height: 55vh;
   }
-  #footer {
-    display: none !important;
+  footer {
+    justify-content: end;
   }
-}
-@media (max-width: 930px) {
-  #about-me #div-container {
-    grid-template-columns: 30vw 1fr;
-  }
-  #about-me #div-text h1 {
-    font-size: 1rem;
+  footer #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 91vh;
+    width: 100vw;
+    padding: 20px;
   }
   footer #contact h1 {
-    font-size: 2rem;
+    font-size: 4rem;
+  }
+  footer #contact h1 span::before {
+    width: 100%;
+    top: 40px;
+    height: 7vh;
+  }
+  footer #contact #button {
+    justify-self: center;
+    height: 15vh;
+    width: 90vw;
+    position: relative;
+    z-index: 1;
+  }
+  footer #contact #button shader-art {
+    height: 15vh;
+    width: 100%;
+    position: absolute;
+  }
+  footer #separate-div {
+    display: none;
+  }
+  footer #footer {
+    display: none !important;
   }
 }/*# sourceMappingURL=style.css.map */

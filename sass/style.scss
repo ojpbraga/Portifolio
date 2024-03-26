@@ -779,6 +779,9 @@ footer {
             height: 15vh;
             // width: 100%;
         }
+        #bg-grup-second {
+            height: 15vh;
+        }
     }
     header{
         height: 65px;
@@ -917,30 +920,54 @@ footer {
     min-width: 70vw;
     min-height: 55vh;
    }
-   #projects #div-container #div-carousel #div-carousel-container .carousel-item {
-    // margin: 0 10vw;
-   }
 
-   #footer {
-    display: none !important;
-   }
+   footer {
+        justify-content: end;
 
-}
+        #contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 91vh;
+            width: 100vw;
+            padding: 20px;
 
-// Por enquanto 
-@media (max-width: 930px) {
-    #about-me #div-container {
-        // max-width: 400px;
-        grid-template-columns: 30vw 1fr;
+            h1 {
+                font-size: 4rem;
+
+               span {
+
+                &::before {
+                    width: 100%;
+                    top: 40px;
+                    height: 7vh;
+                }
+               }
+            }
+
+            // Obs.: Refatorar utilizando essas propriedades de position
+            #button {
+                justify-self: center;
+                height: 15vh;
+                width: 90vw;
+                position: relative;
+                z-index: 1;
+
+                shader-art {
+                    height: 15vh;
+                    width: 100%;
+                    position: absolute;
+                }
+            }
+        }
+        
+        #separate-div {
+            display: none;
+        }
+        #footer {
+            display: none !important;
+        }
     }
-    #about-me #div-text h1 {
-        font-size: 1rem;
-    }
-    #about-me #div-profile #div-background {
-        // width: 100px;
-        // height: 100px;
-    }
-    footer #contact h1 {
-        font-size: 2rem;
-    }
+
+
 }
