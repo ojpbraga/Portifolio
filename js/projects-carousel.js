@@ -39,14 +39,20 @@ carouselAnimation();
 function initTitleAnimation() {
 
     const divTitle = document.querySelector('#projects > #div-container > #div-title');
+    const small = window.matchMedia('(max-width: 430px)');
 
     window.addEventListener('scroll', () => {
         if(sectionProjects.getBoundingClientRect().top <= 0) {
-            divTitle.style.display = 'flex';
-            divTitle.style.transform = 'translate3d(0, 150px, 0)';
+
+            // Observação: na refatoração, criar uma class no Css que fará o elemente ter as novas propriedades. Modificar as propriedades por JS não é eficiente.
+            if(small.matches) {
+                divTitle.style.transform = 'translate3d(0, 9.5vh, 0)';
+            } else {
+                divTitle.style.transform = 'translate3d(0, 15vh, 0)';
+            }
+
         } else {
             divTitle.style.transform = 'translate3d(0, 0, 0)';
-            divTitle.style.display = 'none';
         }
         
     });
