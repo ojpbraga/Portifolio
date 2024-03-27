@@ -202,9 +202,9 @@ section {
 }
 #presentation #div-texts p {
   width: 30vw;
-  color: var(--color-text);
+  color: #d9d9d9;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 #presentation #div-profile video {
