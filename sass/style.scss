@@ -6,6 +6,7 @@
     justify-content: center;
 }
 
+// Scroll scroll-snap-type
 html {
     scroll-snap-type: y mandatory;
 
@@ -28,7 +29,10 @@ html {
 body {
     scroll-snap-type: y mandatory;
 }
+// End: Scroll scroll-snap-type
 
+
+// Background Color and Img
 #bg {
     display: flex;
     position: absolute;
@@ -77,8 +81,10 @@ main {
     
 
 }
+// End: Background Color and Img
 
 
+// Header
 header {
     @include centerItem();
     justify-content: space-between;
@@ -102,6 +108,7 @@ header {
         font-weight: 900;
         letter-spacing: 1px;
     }
+
     #header-div-container {
         @include centerItem();
         gap: 20px;
@@ -130,13 +137,18 @@ header {
     }
     
 }
+// End; Header
 
+
+
+// Sections
 section {
     height: 100vh;
     width: 100%;
     scroll-snap-align: center;
 }
 
+// Presentation
 #presentation {
     @include centerItem();
     flex-direction: column;
@@ -398,7 +410,12 @@ shader-art canvas {
     width: 100%;
     height: 100%;
 }
+.dg.ac {
+    display: none;
+}
+// End: Presentation
 
+// About Me
 #about-me #div-bg {
     position: absolute;
     z-index: -1;
@@ -406,11 +423,9 @@ shader-art canvas {
     width: 100%;
     height: 35vh;
 }
+// End: About Me
 
-.dg.ac {
-    display: none;
-}
-
+// Projects
 #projects {
     @include centerItem();
     flex-direction: column;
@@ -691,7 +706,9 @@ shader-art canvas {
     }
 
 }
+// End: Projects
 
+// Footer
 footer {
     @include centerItem();
     flex-direction: column;
@@ -840,10 +857,11 @@ footer {
     }
 
 }
+// End: Footer
+// End: Sections
 
 // Responsividade
 // Tablet - Retrato mode
-
 // 1390 x 750
 @media (max-width: 1391px) {
     #presentation{
