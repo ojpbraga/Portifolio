@@ -9,7 +9,6 @@ a {
   text-decoration: none;
   margin: 0;
   padding: 0;
-  font-size: 0;
 }
 
 :root {
@@ -436,12 +435,12 @@ shader-art canvas {
   align-items: center;
   justify-content: center;
   position: absolute;
-  rotate: 90deg;
-  top: 40vh;
-  left: -10vw;
+  top: -10vh;
+  left: 0vw;
   justify-content: start;
   border: 2px solid var(--color-yellow-talk);
   border-radius: 20px;
+  padding: 10px;
   height: 3.6rem;
   width: 450px;
   transition: 0.5s;
@@ -469,7 +468,7 @@ shader-art canvas {
   overflow-y: scroll;
   height: 100%;
   gap: 4vh;
-  padding: 4vh 0 15vh 0;
+  padding: 15vh 0 15vh 0;
   scroll-snap-type: y mandatory;
 }
 #projects #div-container #div-carousel #div-carousel-container::-webkit-scrollbar {
@@ -478,20 +477,117 @@ shader-art canvas {
 #projects #div-container #div-carousel #div-carousel-container .carousel-item {
   scroll-snap-align: center;
   scroll-snap-stop: always;
-  background: #405CD9;
-  opacity: 1;
-  width: 50vw;
+  background: #c9c9c9;
   height: 60vh;
+  width: 50vw;
   transition: all 0.5s ease-in-out;
   border-radius: 30px;
+  display: flex;
+  padding: 20px 30px;
 }
-#projects #div-container #div-carousel #div-carousel-container .active {
-  height: 70vh;
-  width: 65vw;
+#projects #div-container #div-carousel #div-carousel-container .carousel-item .item-container-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item .item-container-text .container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item .item-container-text .container-text .container-title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item .item-container-text .container-text .container-title img {
+  height: 5vh;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item .item-container-text .container-text .container-title h1 {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item .container-links {
+  display: none;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item .item-container-img {
+  display: none;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  opacity: 1;
+  height: 60vh;
+  width: 70vw;
+  transition: all 0.5s ease-in-out;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: space-between;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-text .container-title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-text .container-title img {
+  height: 5vh;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-text .container-title h1 {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-text p {
+  display: inherit;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-links .link-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #673485;
+  padding: 5px 20px;
+  border-radius: 7px;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-links .link-container img {
+  height: 20px;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-text .container-links .link-container p {
+  color: #fff;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-img {
+  display: grid;
+  place-items: center;
+}
+#projects #div-container #div-carousel #div-carousel-container .carousel-item.active .item-container-img img {
+  height: 45vh;
 }
 #projects #div-container #div-carousel #div-carousel-container .carousel-item-1 {
   scroll-snap-type: x mandatory;
-  opacity: 0.9;
+  background: #30193E;
 }
 #projects #div-container #div-carousel #div-carousel-container .carousel-item-2 {
   scroll-snap-type: x mandatory;

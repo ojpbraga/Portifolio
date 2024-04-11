@@ -48,7 +48,7 @@ function initTitleAnimation() {
             if(small.matches) {
                 divTitle.style.transform = 'translate3d(0, 9.5vh, 0)';
             } else {
-                divTitle.style.transform = 'translate3d(0, 15vh, 0)';
+                divTitle.style.transform = 'translate3d(0, 13.5vh, 0)';
             }
 
         } else {

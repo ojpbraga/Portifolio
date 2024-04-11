@@ -450,7 +450,7 @@ shader-art canvas {
 
        
     }
-    
+
     #div-container {
         @include centerItem();
         position: relative;
@@ -461,13 +461,14 @@ shader-art canvas {
         #div-title {
             @include centerItem();
             position: absolute;
-            rotate: 90deg;
-            top: 40vh;
-            left: -10vw;
+            // rotate: 90deg;
+            top: -10vh;
+            left: 0vw;
 
             justify-content: start;
             border: 2px solid var(--color-yellow-talk);
             border-radius: 20px;
+            padding: 10px;
             height: 3.6rem;
             width: 450px;
 
@@ -498,7 +499,7 @@ shader-art canvas {
                 height: 100%;
                 // width: 85vw;
                 gap: 4vh;
-                padding: 4vh 0 15vh 0;
+                padding: 15vh 0 15vh 0;
                 scroll-snap-type: y mandatory;
 
                 &::-webkit-scrollbar {
@@ -508,31 +509,157 @@ shader-art canvas {
                 .carousel-item {
                     scroll-snap-align: center;
                     scroll-snap-stop: always;
-
-                    background: #405CD9;
-                    opacity: 1;
-                    width: 50vw;
+    
+                    background: #c9c9c9;
                     height: 60vh;
+                    width: 50vw;
                     
                     transition: all .5s ease-in-out;
-                    // z-index: -1;
+                    border-radius: 30px;
+    
+                    display: flex;
+                    padding: 20px 30px;
+
+                    .item-container-text {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        justify-content: space-between;
+
+                        .container-text {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 3vh;
+                            
+                            .container-title {
+                                display: flex;
+                                gap: 15px;
+                                align-items: center;
+                                
+                                img {
+                                    height: 5vh;
+                                }
+                                h1 {
+                                    color: #fff;
+                                    font-size: 2rem;
+                                    letter-spacing: 3px;
+                                }
+                            }
+                            
+                        }
+                    }
+
+                    .container-links {
+                        display: none;
+                    }
+
+                    .item-container-img {
+                        display: none;
+                    }
+    
+                
+                }
+
+                .carousel-item.active {
+                    scroll-snap-align: center;
+                    scroll-snap-stop: always;
+
+                    opacity: 1;
+                    height: 60vh;
+                    width: 70vw;
+                    
+                    transition: all .5s ease-in-out;
                     border-radius: 30px;
 
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 30px;
+
+                    .item-container-text {
+                        display: flex;
+                        flex-direction: column;
+                        width: 40%;
+                        justify-content: space-between;
+                        
+                        .container-text {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 3vh;
+                            
+
+                            .container-title {
+                                display: flex;
+                                gap: 15px;
+                                align-items: center;
+                                
+        
+                                img {
+                                    height: 5vh;
+                                }
+                                h1 {
+                                    color: #fff;
+                                    font-size: 2rem;
+                                    letter-spacing: 3px;
+                                }
+                            }
+    
+                            p {
+                                display: inherit;
+                                color: #fff;
+                                font-weight: 300;
+                                font-family: 'Poppins';
+                            }
+                        }
+
+                        .container-links {
+                            @include centerItem();
+                            justify-content: space-between;
+                            padding: 0 2vw;
+
+                            .link-container {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                background: #673485;
+                                padding: 5px 20px;
+                                border-radius: 7px;
+
+                                img {
+                                    height: 20px;
+                                }
+                                p {
+                                    color: #fff;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                    .item-container-img {
+                        display: grid;
+                        place-items: center;
+    
+                        img {
+                            height: 45vh;
+                        }
+                    }
                     
                 }
+                // .carousel-item .active {
+                //     min-width: 1000px;
+                // }
 
-                .active {
-                    height: 70vh;
-                    width: 65vw;
-                }
+
 
                 .carousel-item-1 {
                     scroll-snap-type: x mandatory;
                     // height: 60vh;
                     // width: 65vw;
                     // bottom: 45%;
-                    opacity: .9;
+                    // opacity: .9;
                     // transform: translateY(20%);
+                    background: #30193E;
                 }
 
                 .carousel-item-2 {
@@ -563,7 +690,7 @@ shader-art canvas {
         
     }
 
-} 
+}
 
 footer {
     @include centerItem();
