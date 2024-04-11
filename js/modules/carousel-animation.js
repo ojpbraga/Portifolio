@@ -1,9 +1,8 @@
-const itemsCarousel = document.querySelectorAll('.carousel-item');
-const containerCarousel = document.querySelector('#div-carousel-container');
-const sectionProjects = document.querySelector('#projects');
-
-// Ative quando a página estiver no topo 
-function carouselAnimation() {
+export function initCarouselAnimation() {
+    const itemsCarousel = document.querySelectorAll('.carousel-item');
+    const containerCarousel = document.querySelector('#div-carousel-container');
+    
+    // Ative quando a página estiver no topo 
     function animationDiv(position, positionLenght) {
         itemsCarousel.forEach((div, index) => {
 
@@ -33,11 +32,12 @@ function carouselAnimation() {
         }
     });
 }
-carouselAnimation();
+
 
 // Animation Title
-function initTitleAnimation() {
+export function initTitleAnimation() {
 
+    const sectionProjects = document.querySelector('#projects');
     const divTitle = document.querySelector('#projects > #div-container > #div-title');
     const small = window.matchMedia('(max-width: 430px)');
 
@@ -58,5 +58,3 @@ function initTitleAnimation() {
     });
 
 }
-
-initTitleAnimation();
