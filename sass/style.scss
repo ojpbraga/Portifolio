@@ -504,7 +504,6 @@ shader-art canvas {
         #div-carousel {
             @include centerItem();
             height: 100%;
-            
 
             #div-carousel-container {
                 display: grid;
@@ -521,11 +520,13 @@ shader-art canvas {
                     display: none;
                 }
 
+                // Carousel default
                 .carousel-item {
                     scroll-snap-align: center;
                     scroll-snap-stop: always;
     
-                    background: #c9c9c9;
+                    opacity: .9;
+                    // background: #c9c9c9;
                     height: 60vh;
                     width: 50vw;
                     
@@ -534,6 +535,7 @@ shader-art canvas {
     
                     display: flex;
                     padding: 20px 30px;
+                    justify-content: space-between;
 
                     .item-container-text {
                         display: flex;
@@ -560,75 +562,21 @@ shader-art canvas {
                                     letter-spacing: 3px;
                                 }
                             }
+                            p {
+                                display: none;
+                                color: #fff;
+                                font-weight: 300;
+                                font-family: 'Poppins';
+                            }
                             
                         }
                     }
 
                     .container-links {
-                        display: none;
-                    }
-
-                    .item-container-img {
-                        display: none;
-                    }
-    
-                
-                }
-
-                .carousel-item.active {
-                    scroll-snap-align: center;
-                    scroll-snap-stop: always;
-
-                    opacity: 1;
-                    height: 60vh;
-                    width: 70vw;
-                    
-                    transition: all .5s ease-in-out;
-                    border-radius: 30px;
-
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 30px;
-
-                    .item-container-text {
-                        display: flex;
-                        flex-direction: column;
-                        width: 40%;
-                        justify-content: space-between;
-                        
-                        .container-text {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 3vh;
-                            
-
-                            .container-title {
-                                display: flex;
-                                gap: 15px;
-                                align-items: center;
-                                
-        
-                                img {
-                                    height: 5vh;
-                                }
-                                h1 {
-                                    color: #fff;
-                                    font-size: 2rem;
-                                    letter-spacing: 3px;
-                                }
-                            }
-    
-                            p {
-                                display: inherit;
-                                color: #fff;
-                                font-weight: 300;
-                                font-family: 'Poppins';
-                            }
-                        }
-
-                        .container-links {
                             @include centerItem();
+                            display: none;
                             justify-content: space-between;
+                            gap: 8px;
                             padding: 0 2vw;
 
                             .link-container {
@@ -646,10 +594,56 @@ shader-art canvas {
                                     color: #fff;
                                 }
                             }
-                        }
-
                     }
 
+                    .item-container-img {
+                        display: none;
+                        place-items: center;
+    
+                        img {
+                            
+                            height: 5vh;
+                        }
+                    }
+
+                }
+
+                // Carousel Ativado
+                // Obs: necessário refatorar
+                .carousel-item.active {
+
+                    opacity: 1;
+                    height: 60vh;
+                    width: 70vw;
+                    overflow: hidden;
+
+                    .item-container-text {
+                        width: 40%;
+                        
+                        .container-text {
+                        
+                            .container-title {
+                                display: flex;
+        
+                                img {
+                                    // height: 5vh;
+                                }
+                                h1 {
+                                    // color: #fff;
+                                    // font-size: 2rem;
+                                    // letter-spacing: 3px;
+                                }
+                            }
+    
+                           p {
+                                display: inherit;
+                           }
+                        }
+
+                        .container-links {
+                            display: flex;
+                            }
+                        }
 
                     .item-container-img {
                         display: grid;
@@ -660,30 +654,35 @@ shader-art canvas {
                         }
                     }
                     
-                }
-                // .carousel-item .active {
-                //     min-width: 1000px;
-                // }
+                }}
 
+                // Animação
+                .carousel-item.active > div {
+                    transition-delay: 4s;
+                    animation: go 2s forwards;
+                }
+
+                @keyframes go {
+                    from {
+                    transform: translateY(-300px);
+                    }
+                    to {
+                    transform: translateY(0);
+                    }
+                }
+                // Fim animação
+                }
+
+                
 
 
                 .carousel-item-1 {
-                    scroll-snap-type: x mandatory;
-                    // height: 60vh;
-                    // width: 65vw;
-                    // bottom: 45%;
-                    // opacity: .9;
-                    // transform: translateY(20%);
                     background: #30193E;
                 }
 
                 .carousel-item-2 {
-                    scroll-snap-type: x mandatory;
-                    // height: 20vh;
-                    // width: 50vw;
-                    opacity: 0.8;
-                    // bottom: 100%;
-                    // transform: translateY(70%);
+                    background: tomato;
+                    
                 }
                 
 
@@ -701,11 +700,11 @@ shader-art canvas {
 
 
             }
-        }
+                
         
     }
 
-}
+
 // End: Projects
 
 // Footer

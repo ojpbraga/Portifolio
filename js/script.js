@@ -11,4 +11,4 @@ initTextAboutMe();
 initMouseMove();
 initCarouselAnimation();
 initTitleAnimation();
-initBgProjects();
+// initBgProjects();
