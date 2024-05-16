@@ -201,7 +201,7 @@ section {
 }
 #presentation #div-texts p {
   width: 30vw;
-  color: #d9d9d9;
+  color: var(--color-text);
   font-family: Inter;
   font-size: 1.2rem;
   font-weight: 400;
@@ -270,7 +270,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text);
+  color: white;
   text-align: center;
   font-family: Inter;
   font-size: 1rem;
@@ -587,7 +587,10 @@ shader-art canvas {
   background: #30193E;
 }
 #projects #div-container .carousel-item-2 {
-  background: tomato;
+  background: #FFAFAF;
+}
+#projects #div-container .carousel-item-2 .link-container {
+  background: #cb6699;
 }
 #projects #div-container .carousel-item-3 {
   background: #A755DA;
